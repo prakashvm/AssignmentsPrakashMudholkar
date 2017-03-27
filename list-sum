@@ -1,0 +1,6 @@
+#lang racket
+(define list-sum
+  (lambda (lst)
+    (if (empty? lst)
+        0
+        (+ (car lst) (list-sum (cdr lst))))))

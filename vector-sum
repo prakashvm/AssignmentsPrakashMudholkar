@@ -1,0 +1,3 @@
+#lang racket
+
+(define (vector-sum v) (for/sum ([x v]) (+ x)))

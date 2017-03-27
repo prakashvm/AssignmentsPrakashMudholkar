@@ -1,0 +1,7 @@
+#lang racket
+
+(define reduce
+  (lambda (f init ls)
+    (if (empty? ls)
+        init
+        (reduce f (f init (first ls)) (rest ls)))))

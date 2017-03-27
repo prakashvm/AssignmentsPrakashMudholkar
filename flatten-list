@@ -1,0 +1,9 @@
+#lang racket
+
+
+(define (flatten-list lst)
+  (cond ((null? lst) '())
+        ((pair? (car lst))
+         (append (flatten-list (car lst))
+                 (flatten-list (cdr lst))))
+        (else (cons (car lst) (flatten-list (cdr lst))))))

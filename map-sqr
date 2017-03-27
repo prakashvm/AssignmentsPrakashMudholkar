@@ -1,0 +1,13 @@
+#lang racket
+
+;;(define (map-sqr lst)
+;;  (if (empty? lst)
+;;      0
+;;      (cons (* (first lst)(first lst))
+;;         (map-sqr (rest lst)))))
+
+(define map-sqr
+  (lambda (lst)
+    (cond ((null? lst) 0)
+          (else (cons (* (car lst) (car lst))
+                (map-sqr (cdr lst)))))))

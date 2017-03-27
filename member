@@ -1,0 +1,9 @@
+#lang racket
+
+(define member
+ (lambda(lis item)
+  (cond((null? lis) #f)
+      (else(if(pair? (car lis))
+               (if(member item (car lis)) #t (member item (cdr lis)))
+               (if(equal? item (car lis)) #t (equal? item (cdr lis))))))))
+

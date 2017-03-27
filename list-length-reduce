@@ -1,0 +1,8 @@
+#lang racket
+
+
+(define (split-list ls a)
+  (define (less b)
+    (define (greater b)
+      (list (filter less ls)
+            (filter greater ls)))
